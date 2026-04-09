@@ -43,26 +43,26 @@ nav a {
   padding: 0.75rem 1rem;
   border-radius: 2rem;
   text-decoration: none;
-  color: #f0f4f8;
+  color:aquamarine;
   font-size: 120%;
   transition: background-color 0.75s ease, color 0.75s ease;
 }
 
 nav a:hover {
-  background-color: rgba(255, 255, 255, 0.16);
+  background-color: rgba(32, 184, 98, 0.16);
   color: white;
 }
 
 /* Hide the checkbox and hamburger icon on desktop */
 nav input[type="checkbox"],
 nav label {
-  
+  display: none;
 }
 
 /* ------------------------------
    MOBILE HAMBURGER MENU
 --------------------------------- */
-@media (max-width: ) {
+@media (max-width: 768px ) {
 
   header nav {
     margin-left: auto;
@@ -71,45 +71,55 @@ nav label {
 
   /* Show the hamburger icon */
   header nav label {
-      /* Make the label visible on smaller screens */
-      /* Change the cursor so it looks clickable */
-      /* Set the icon color */
-      /* Increase the icon size */
+      display: block;
+      cursor: pointer;
+      color: white;
+      font-size: 250%;
+      line-height: 1;
+      margin-left: auto;
   }
 
   /* Hide menu by default */
   nav ul {
-      /* Start with the menu collapsed */
-      /* Hide content that extends past collapsed height */
-      /* Stack menu items vertically */
+      max-height: 0;
+      overflow: hidden;
+      flex-direction: column;
+      background-color: white;
+      border-radius: 1rem;
+      box-shadow: 0 8px 20px rgba(16, 42, 67, 0.3);
+      margin-top: 0.75rem;
+      min-width: 220px;
+      transition: max-height 0.5s ease-in-out;
   }
 
   /* Open menu when checkbox is checked */
   /* Increase max-height if your menu has more links */
   #menu:checked + ul {
-    
+    max-height: 300px;
   }
 
   /* Mobile menu items */
   nav ul li {
     text-align: center;
+    padding: 0;
+    border-bottom: 1px solid #d9e2ec;
   }
 
   nav ul li:last-child {
-    
+    border-bottom: none;
   }
 
   nav ul li a {
-    display: block; /* Makes entire row clickable */
-    margin: 0; /* Removes extra space around link */
-    padding: 0.8rem 2rem; /* Adds more clickable space inside link */
-    border-radius: 0; /* Removes rounded corners so mobile dropdown has straight edges */
-    font-size: 125%; /* Adjusts size of mobile menu links */
-    color: ; /* Text color for mobile menu links */
+    display: block;
+    margin: 0; 
+    padding: 0.8rem 2rem; 
+    border-radius: 0; 
+    font-size: 125%; 
+    color: #102a43
   }
 
   nav ul li a:hover {
-    background-color: #f0f4f8; /* Background color when hovering over item */
-    color: #2f6f91; /* Text color when hovering */
+    background-color: #549ce3; /* Background color when hovering over item */
+    color: #a30ee9; /* Text color when hovering */
   }
 }
